@@ -45,11 +45,11 @@ def setup_underactuated():
     except ImportError:
         if platform.system() is "Darwin":
             get_ipython().system(
-                u"if [ ! -d '/opt/underactuated' ]; then git clone -b limit_cycle_colab https://github.com/TobiaMarcucci/underactuated.git /opt/underactuated && /opt/underactuated/scripts/setup/mac/install_prereqs; fi"  # noqa
+                u"if [ ! -d '/opt/underactuated' ]; then git clone -b limit_cycle_colab_2 https://github.com/TobiaMarcucci/underactuated.git /opt/underactuated && /opt/underactuated/scripts/setup/mac/install_prereqs; fi"  # noqa
             )
         elif platform.linux_distribution() == ("Ubuntu", "18.04", "bionic"):
             get_ipython().system(
-                u"if [ ! -d '/opt/underactuated' ]; then git clone -b limit_cycle_colab https://github.com/TobiaMarcucci/underactuated.git /opt/underactuated && /opt/underactuated/scripts/setup/ubuntu/18.04/install_prereqs; fi"  # noqa
+                u"if [ ! -d '/opt/underactuated' ]; then git clone -b limit_cycle_colab_2 https://github.com/TobiaMarcucci/underactuated.git /opt/underactuated && /opt/underactuated/scripts/setup/ubuntu/18.04/install_prereqs; fi"  # noqa
             )
         else:
             assert False, "Unsupported platform"
